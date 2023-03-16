@@ -1,0 +1,104 @@
+/*  --dark: #07485a;
+  --darker: #C8D8E4;
+  --darkest: #2B6777;
+*/
+:root{
+  --dark: #07485A;
+  --darker: #C8D8E4;
+  --darkest: #2B6777;
+  --light: #ABD5E1;
+  --white: #F8F8FF;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #343434 /*#100C07*/;
+  color: #6D6A6A;
+}
+main{
+  width: 95%;
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
+h1{
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+h2{
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+input{
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.2rem;
+  border: 0.1rem solid var(--darkest);
+  border-radius: 0.2rem;
+}
+#add{
+  background-image: linear-gradient(45deg, var(--light), var(--dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.5rem 0.2rem;
+  border: none/*1px solid #100C07*/;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  /*color: var(--white);*/
+}
+#add:hover{
+  font-size: 1.1rem;
+}
+.delete{
+  background-image: linear-gradient(45deg, red, red);
+  color: var(--white);
+}
+/*#task-container{
+  display: flex;
+  flex-direction: column-reverse;
+}*/
+#task-container .task-element{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+#task-container .task-element .task-content{
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.2rem;
+  border: 0.1rem solid var(--darkest);
+  border-radius: 0.2rem;
+}
+#task-container .task-element .action-buttons button{
+  padding: 0.5rem 0.2rem;
+  border: none/*1px solid #100C07*/;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+#task-container .task-element .action-buttons button:hover{
+  font-size: 1.1rem;
+}
+#task-container .task-element .edit{
+  background-image: linear-gradient(45deg, var(--light), var(--dark));
+}
+
+#task-container .task-element .delete{
+  background-image: linear-gradient(45deg, red, red);
+}
+
+
+
+
+@media screen and (min-width: 600px){
+  main{
+    width: 50%;
+  }
+}
